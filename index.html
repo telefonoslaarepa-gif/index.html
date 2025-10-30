@@ -1,41 +1,139 @@
 <!DOCTYPE html>
-<html ng-app="airpub" ng-controller="global">
-  <head ng-controller="meta">
-    <base href="/" />
-    <meta charset="UTF-8">
-    <title ng-bind="title"></title>
-    <meta name="fragment" content="!" />
-    <meta name="description" content="{{description}}">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- dependencies stylesheets and scripts, using default GitHub Page CDN -->
-    <link rel="stylesheet" href="http://static.duoshuo.com/airpub/airpub-dependencies.min.css?v=0.3.2">
-    <script src="http://static.duoshuo.com/airpub/airpub-dependencies.min.js?v=0.3.2"></script>
-    <!-- default theme: chill -->
-    <link rel="stylesheet" href="http://static.duoshuo.com/airpub/themes/chill/0.3.0/css/chill.min.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="http://static.duoshuo.com/airpub/themes/chill/0.3.0/favicon.ico" />
-  </head>
-  <body ng-controller="base" ng-class="state.current.controller">
-    <div ui-view="layout"></div>
-    <!-- airpub configs -->
-    <script>
-      var airpubConfigs = {        
-        name: 'Airpub', // 博客名称
-        description: 'Just another Airpub blog', // 博客描述
-        url: 'http://your-uri', // 博客站点永久链接
-        theme: 'chill/0.3.0', // 当前主题与主题版本（如无版本可省略为：`chill`）
-        themePath: 'http://static.duoshuo.com/airpub/themes', // 博客主题根目录
-        upyun: { // 用于上传图片
-          bucket: 'mybucket', // 又拍云 bucket 配置 (可选)
-          form_api_secret: 'xxxxxx' // 又拍云 form_api_secret (可选)
-        }
-      };
-      var duoshuoQuery = {
-        short_name: 'your_duoshuo_short_name' // 修改成你的多说 short_name
-      };
-    </script>
-    <!-- duoshuo embed js -->
-    <script src="http://static.duoshuo.com/embed.unstable.js"></script> 
-    <!-- airpub angular app -->
-    <script src="http://static.duoshuo.com/airpub/airpub.min.js?v=0.3.2"></script>
-  </body>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teléfonos La Arepa</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #f8f8f8;
+      color: #222;
+    }
+    header {
+      background-color: #ffcc00;
+      text-align: center;
+      padding: 20px;
+      color: #111;
+    }
+    header img {
+      width: 90px;
+    }
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 15px 25px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background-color: #ffcc00;
+      color: #111;
+    }
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h2 {
+      color: #ffcc00;
+    }
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #111;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .whatsapp {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-decoration: none;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="https://raw.githubusercontent.com/tuusuario/telefonos-la-arepa/main/logo.png" alt="Logo" />
+    <h1>Teléfonos La Arepa</h1>
+    <p>Los mejores precios en iPhones nuevos y usados 📱</p>
+  </header>
+
+  <nav>
+    <a href="#nuevos">iPhones Nuevos</a>
+    <a href="#usados">iPhones Usados</a>
+    <a href="#vende">Vende tu iPhone</a>
+    <a href="#reparacion">Reparaciones</a>
+  </nav>
+
+  <section id="nuevos">
+    <h2>📦 iPhones Nuevos Sellados</h2>
+    <div class="productos">
+      <div class="card">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-1inch-natural-titanium" alt="iPhone 15 Pro" />
+        <h3>iPhone 15 Pro</h3>
+        <p>Nuevo, sellado. Disponible en todos los colores.</p>
+      </div>
+      <div class="card">
+        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-finish-select-202309-pink" alt="iPhone 15" />
+        <h3>iPhone 15</h3>
+        <p>Nuevo, sellado. Garantía original Apple.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="usados">
+    <h2>♻️ iPhones de Segunda Mano</h2>
+    <p>Equipos revisados y garantizados por nuestro servicio técnico.</p>
+  </section>
+
+  <section id="vende">
+    <h2>💰 Vende tu iPhone</h2>
+    <p>¿Quieres vender tu iPhone? Escríbenos en WhatsApp y te hacemos una oferta rápida.</p>
+    <a href="https://wa.me/51976632597" target="_blank">👉 Contactar por WhatsApp</a>
+  </section>
+
+  <section id="reparacion">
+    <h2>🔧 Servicio de Reparación</h2>
+    <p>Reparamos pantallas, baterías, cámaras y más con repuestos originales.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Teléfonos La Arepa - Todos los derechos reservados.</p>
+  </footer>
+
+  <a href="https://wa.me/51976632597" target="_blank" class="whatsapp">💬</a>
+</body>
 </html>
